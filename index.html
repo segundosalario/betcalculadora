@@ -1,0 +1,501 @@
+<!DOCTYPE html><html lang="pt" class="rs fw gr" data-prefix="1803143"><head><script>
+//<![CDATA[
+
+    const browserTimezoneOffset =
+      new Date().getTimezoneOffset()
+
+    const cookiesFormatted =
+      Object.fromEntries(
+        document.cookie.split(
+          '; '
+        ).map(
+          s => s.split(
+            '='
+          )
+        )
+      )
+
+    const cookieTimeZoneOffset =
+      parseInt(
+        cookiesFormatted.timezoneOffset
+      )
+
+    function setTimeZoneCookie () {
+      const oneYearInSeconds = (
+        60 * 60 * 24 * 365
+      )
+
+      const domain =
+        "surebet.com"
+
+      const newCookie = {
+        timezoneOffset:
+          browserTimezoneOffset,
+        'max-age':
+          oneYearInSeconds,
+        path: '/',
+        domain
+      }
+
+      const newCookieFormatted =
+        Object.entries(
+          newCookie
+        ).map(
+          a => a.join('=')
+        ).join(
+          '; '
+        )
+
+      document.cookie =
+        newCookieFormatted
+    }
+
+    function reloadIfTimeZoneChanged () {
+      const isTimeZoneChanged = (
+        cookieTimeZoneOffset !==
+          browserTimezoneOffset
+      )
+
+      const isGetRequest =
+        "true"
+
+      const isReload = (
+        isTimeZoneChanged &&
+          isGetRequest
+      )
+
+      if (isReload) {
+        location.reload()
+      }
+    }
+
+    setTimeZoneCookie()
+
+    reloadIfTimeZoneChanged()
+
+//]]>
+</script>
+
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <meta name="release-version" content="9fe49dead9a036e7846f377b2995d53c739dbf33">
+
+  <script>
+//<![CDATA[
+
+    window.host =
+      "surebet.com"
+
+//]]>
+</script>
+    <meta name="description" content="Serviço de análise da chance das casas de apostas em eventos esportivos">
+  <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="dswbyPitqeEnPrmwHj167FD8lVy9bBRz6zcfCrj-aunj0d2nc-0rJypgv6QM74Py2gDuXjmaREj-on3tSuLm-Q">  <script>
+    var prefixData = document.documentElement.dataset.prefix;
+    if (prefixData) {
+        var id = ["UA", prefixData, 12].join("-");
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = "https://www.googletagmanager.com/gtag/js?id=" + id;
+        document.head.appendChild(script);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', id, {"cookie_domain":"surebet.com","custom_map":{"dimension1":"plan"}});
+	
+    }
+</script>
+
+
+  <link rel="stylesheet" href="css/base-4b2dbd57129402d61e1429adf40014e0fb703c64ece27941ffe0e011bb19cfe8.css" media="screen"><script type="importmap" data-turbo-track="reload">{
+  "imports": {
+    "application": "/assets/application-a289b75770ddffd7c262eb1e7a375c7ab58646667691f7f96ab7e9f255668620.js",
+    "bootstrap": "/jsdelivr/npm/bootstrap@5.3.2/dist/js/bootstrap.esm.js",
+    "@popperjs/core": "/jsdelivr/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js",
+    "calculator/converter": "/assets/calculator/converter-d2130f1f2e7e4b836a02232cfd19d3ffc436b19a26adee2bb009774f3f9acceb.js",
+    "calculator/calculator": "/assets/calculator/calculator-e1f5325326ce7ad4f14271d4b28b387cf9233942b01d460e9b9f37bc812ea477.js",
+    "api/check": "/assets/api/check-1e6fabf850b7c72bfc232b67b6ee9b328a709a3790659945da17639038eff195.js",
+    "authentication_token/form": "/assets/authentication_token/form-0f5d7a25a1c5676d0af992857a30adbddceb6ee1e1d8679168545fdeab23f057.js",
+    "complex_conditions/check": "/assets/complex_conditions/check-b08a3964801aa9d0188a1cac74b4ee0ad1013798dfd64db968f8af958f7f84b7.js",
+    "admin/complex_conditions/form": "/assets/admin/complex_conditions/form-16592c1a19d518b543f85d5aaf5fe8bd611f2e9ba529bb3a1daac29d4a351c04.js",
+    "bookie_settings/link/advanced": "/assets/bookie_settings/link/advanced-a6f6166621c5f8fdbbd3ef0f432e1c7a865ed4d8fef8e4f0a0bb8565feb65ee8.js",
+    "filter/tournaments": "/assets/filter/tournaments-239947bdea8c58bb74505373ce7097aebf5f483fc460e3a76510d9f54efd5bf0.js",
+    "bookie_ideas/add_to_filter": "/assets/bookie_ideas/add_to_filter-ea2ec98d43ef86fa87cd87137976d4d8c46780a4ebd6f05a443a46168e63154c.js",
+    "vue": "/jsdelivr/npm/vue@3.4.15/dist/vue.esm-browser.prod.js",
+    "lodash": "/jsdelivr/npm/lodash@4.17.21/lodash.min.js/+esm",
+    "jquery": "/jsdelivr/npm/jquery@3.7.1/dist/jquery.js/+esm",
+    "jquery-ujs": "/jsdelivr/npm/jquery-ujs@1.2.3/+esm",
+    "copy-text-to-clipboard": "/jsdelivr/npm/copy-text-to-clipboard@3.2.0/index.js/+esm",
+    "antlr4": "/jsdelivr/npm/antlr4@4.13.1/+esm",
+    "@hotwired/turbo-rails": "/assets/turbo.min-13afb55d5ff2e3b7de0fd4b9108f94b28404a803c84d13970d490b2d1d9223bc.js",
+    "@hotwired/stimulus": "/assets/stimulus.min-59f6a188a51873d87a6ae8218ac6e829404b5cacd7f2a8fb7249abfdec5ece6a.js",
+    "@hotwired/stimulus-loading": "/assets/stimulus-loading-6024ee603e0509bba59098881b54a52936debca30ff797835b5ec6a4ef77ba37.js",
+    "js.cookie": "/jsdelivr/npm/js-cookie@3.0.5/+esm",
+    "controllers/application": "/assets/controllers/application-4d933b111d046ff32ceff0dc7bcb3da6526ec18f92ba6e3c7fc82f69ebd63e0f.js",
+    "controllers/cookies_controller": "/assets/controllers/cookies_controller-2655c696a1864ec36828dac15aa8c150196e6395919b6df656bd4346395d35d0.js",
+    "controllers": "/assets/controllers/index-17809e1153d23b37458a79b009dfb37c523edf3c72b8fd9b8a0e13d35ce8632b.js"
+  }
+}</script>
+<link rel="modulepreload" href="/assets/application-a289b75770ddffd7c262eb1e7a375c7ab58646667691f7f96ab7e9f255668620.js">
+<link rel="modulepreload" href="/jsdelivr/npm/bootstrap@5.3.2/dist/js/bootstrap.esm.js">
+<link rel="modulepreload" href="/jsdelivr/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js">
+<link rel="modulepreload" href="/jsdelivr/npm/vue@3.4.15/dist/vue.esm-browser.prod.js">
+<link rel="modulepreload" href="/jsdelivr/npm/lodash@4.17.21/lodash.min.js/+esm">
+<link rel="modulepreload" href="/jsdelivr/npm/jquery@3.7.1/dist/jquery.js/+esm">
+<link rel="modulepreload" href="/jsdelivr/npm/jquery-ujs@1.2.3/+esm">
+<link rel="modulepreload" href="/assets/turbo.min-13afb55d5ff2e3b7de0fd4b9108f94b28404a803c84d13970d490b2d1d9223bc.js">
+<link rel="modulepreload" href="/assets/stimulus.min-59f6a188a51873d87a6ae8218ac6e829404b5cacd7f2a8fb7249abfdec5ece6a.js">
+<link rel="modulepreload" href="/assets/stimulus-loading-6024ee603e0509bba59098881b54a52936debca30ff797835b5ec6a4ef77ba37.js">
+<script src="js/es-module-shims.min-e9dfe3da61272ad1b1d2ce9748b611b65b0050a1fbd576689fa821c2633bf572.js" async="async" data-turbo-track="reload"></script>
+<script type="module">import "application"</script>
+<script src="js/bundle.min.js" crossorigin="anonymous" id="sentry-script" async=""></script>
+<script>
+//<![CDATA[
+(function(){ 
+  var hook = function() { 
+Sentry.setUser({"ip_address":"2a00:b703:fff1:102::1","email":"anonymous"})
+Sentry.setContext("attributes", {"country":"NL","timezone":"Edinburgh"})
+const IGNORE_UA = ["Bytespider"]
+const IGNORE_BC_URLS = ["translate.googleapis.com"]
+const DENY_URLS_RE = /^((chrome|moz)-extension|webkit-masked-url):\/\//i
+Sentry.init({
+  dsn: "https://77b02acefb254bcab1368b0e1140991d@error.surebet.com/1",
+  autoSessionTracking: false,
+  ignoreErrors: ["Relative references must start with either","Relative module specifiers must start with","does not start with \"/\", \"./\", or \"../\"","“./”, “../” ou “/”","Unexpected token import","Unable to fetch ","Load failed","Importing a module script failed","__gCrWeb.instantSearch"],
+  denyUrls: [DENY_URLS_RE],
+  release: "9fe49dead9a036e7846f377b2995d53c739dbf33",
+  beforeSend(event, hints) {
+    if (IGNORE_UA.some(v => window.navigator.userAgent.includes(v))) return null;
+    if ((event.breadcrumbs || []).some(breadcrump => breadcrump.url && IGNORE_BC_URLS.some(ign => breadcrump.url.includes(ign)))) return null;
+    if (event.exception) {
+      if ((event.exception.values || []).some(e => e.stacktrace && (e.stacktrace.frames || []).some(frame => frame.filename && DENY_URLS_RE.test(frame.filename)))) return null;
+    }
+    return event;
+  }
+});
+
+  }; 
+  if (window.Sentry) { hook(); } else { document.getElementById('sentry-script').addEventListener("load", hook); } 
+})();
+
+//]]>
+</script>
+
+
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon-0550128f800122627c4718c50c571f65ff65dcd661f3759c422ffe9ce09c3f6c.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32-8a168896d5224d5e71a06a284228a2dce97d3611e7d6405f04ee9696d34fa69d.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16-5524daa12de5ef76867e5dfc7a590c4a3965606e26e1da3e5a6706da88988e99.png">
+<link rel="manifest" href="/base/manifest.webmanifest">
+<link rel="mask-icon" href="images/safari-pinned-tab-fb8f47c4133912298dae3b6f29bba80146a6dca5083d87d4bd3599de915e11a3.svg" color="#30437c">
+<link rel="shortcut icon" href="favicon-315ff20d854d0af9abc66c861d76470b047d6016c3d914b380a1f336f0d26366.ico">
+<meta name="msapplication-TileColor" content="#30437c">
+<meta name="msapplication-config" content="/base/browserconfig.xml">
+<meta name="theme-color" content="#30437c">
+
+      <link rel="alternate" href="https://en.surebet.com/calculator" hreflang="en">
+    <link rel="alternate" href="https://de.surebet.com/calculator" hreflang="de">
+    <link rel="alternate" href="https://el.surebet.com/calculator" hreflang="el">
+    <link rel="alternate" href="https://es.surebet.com/calculator" hreflang="es">
+    <link rel="alternate" href="https://fr.surebet.com/calculator" hreflang="fr">
+    <link rel="alternate" href="https://it.surebet.com/calculator" hreflang="it">
+    <link rel="alternate" href="https://ru.surebet.com/calculator" hreflang="ru">
+    <link rel="alternate" href="https://tr.surebet.com/calculator" hreflang="tr">
+    <link rel="alternate" href="https://zh.surebet.com/calculator" hreflang="zh">
+    <link rel="alternate" href="https://us.surebet.com/calculator" hreflang="us">
+    <link rel="alternate" href="https://su.surebet.com/calculator" hreflang="su">
+    <link rel="alternate" href="https://ja.surebet.com/calculator" hreflang="ja">
+
+
+  <title>SureBet - Apostas profissionais</title>
+  <link rel="canonical" href="https://pt.surebet.com/calculator">
+    <title>Calculadora de apostas seguras online</title>
+  <meta name="description" content="Baixe o programa de cálculo de aposta segura - calculadora de aposta segura">
+
+  <script type="module">import "calculator/calculator"</script>
+</head>
+
+  <body id="simple">
+<script>
+//<![CDATA[
+var Calculator = {
+  currencies: [[1.0, 0.936499, 5.2341], [1.0678067995801384, 1.0, 5.589007569682402], [0.19105481362602933, 0.17892264190596283, 1.0]],
+  formulaName: "bookformula1",
+  prongsAmount: 0,
+  oddFormat: "eu",
+  winBetBehaviours: null,
+  calculateBets: null,
+  locale: "pt",
+  settings: null
+};
+
+//]]>
+</script>
+<header id="mini-header"><a class="logo" target="_parent" href="/">Sure<span id="hfix">Bet</span></a><span id="tz-wrapper"></span></header>
+<main class="tool">
+  <div class="d-flex title-container">
+    <h1 class="title">Calculadora de apostas seguras online</h1>
+    <div style="" class="profit-container">
+      <span class="profit_percent cursor-help" data-bs-delay="{&quot;show&quot;:150,&quot;hide&quot;:0}" data-bs-toggle="tooltip" data-bs-html="false" title="Lucro"></span>
+    </div>
+  </div>
+
+  <div class="calculator-container grid-2">
+    
+
+
+      <div class="formula_info">
+  <div>
+    <label for="prongs_amount">Número de resultado de aposta segura:</label>
+    <select class="prongs_amount form-select inline-input w-auto" id="prongs_amount">
+      <option selected="selected" value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4 ou mais</option>
+    </select>
+    </div>
+  <div class="fork-type-container">
+    <label for="fork_type">Tipo de aposta segura (fórmula):</label>
+    <select class="fork_type form-select inline-input w-auto" id="fork_type">
+    </select>
+  </div>
+</div>
+
+
+    <table class="tbl-sm calculator-table grid-2" id="calc_table">
+      <tbody><tr class="header">
+
+  <th colspan="2" class="coeff_c  first" id="grid-header-odds">
+    Chance
+  </th>
+  
+  <th colspan="2" class="comission_c" id="grid-header-comission">
+    <span>
+      Com comissão
+
+      <abbr data-bs-toggle="tooltip" data-bs-delay="{&quot;show&quot;:150,&quot;hide&quot;:0}" data-bs-html="false" title="Usar valor negativo para comissão de aposta, positivo para comissão de ganho.">
+        <i class="fa fa-question-circle"></i>
+</abbr>    </span>
+
+    <button name="button" type="submit" class="btn btn-light toggle-button" id="commissionToggleButton"><i class="fa fa-angle-down"></i></button>
+  </th>
+
+
+  <th colspan="2" class="curr_c" id="grid-header-stake">
+    <span>
+      Aposta
+
+      <abbr data-bs-toggle="tooltip" data-bs-delay="{&quot;show&quot;:150,&quot;hide&quot;:0}" data-bs-html="false" title="D - As apostas em que o lucro será distribuído
+C - Corrigir o valor da aposta
+">
+        <i class="fa fa-question-circle"></i>
+</abbr>    </span>
+  </th>
+
+  <th colspan="2" class="text-center currency_c" id="grid-header-exchange">
+    Taxas de câmbio
+
+    <button name="button" type="submit" class="btn btn-light toggle-button" id="currenciesToggleButton"><i class="fa fa-angle-down"></i></button>
+  </th>
+
+  <th class="exbet_c">
+    D
+
+    <abbr data-bs-toggle="tooltip" data-bs-delay="{&quot;show&quot;:150,&quot;hide&quot;:0}" data-bs-html="false" title="As apostas em que o lucro será distribuído">
+      <i class="fa fa-question-circle"></i>
+</abbr>  </th>
+
+  <th class="exbet_c">
+    C
+    
+    <abbr data-bs-toggle="tooltip" data-bs-delay="{&quot;show&quot;:150,&quot;hide&quot;:0}" data-bs-html="false" title="Corrigir o valor da aposta">
+      <i class="fa fa-question-circle"></i>
+</abbr>  </th>
+
+    <th colspan="1" class="profit_c" id="grid-header-profit">
+      Lucro
+    </th>
+</tr>
+
+        <tr class="rowPattern d-none">
+  <td class="coeff_c text-nowrap" id="grid-index-coefficient-index">
+    <input class="back_lay btn-site" id="back_lay" name="back_lay" type="button" value="+">
+    <span class="koefficient_descr" title=""></span>
+  </td>
+  <td class="coeff_c coeff_c2" id="grid-index-coefficient-input">
+    <div>
+      <input class="koefficient form-control inline-input w-number" value="1" type="text">
+      <span class="minorb">Chance contra</span>
+    </div>
+  </td>
+  <td class="comission_c comission_c1" id="grid-index-commission-input">
+    <div class="input-group">
+      <input class="commission form-control inline-input w-number" value="0.0" type="text">
+      <span class="input-group-text">%</span>
+    </div>
+  </td>
+  <td class="comission_c" id="grid-index-commission-value"><span class="koefficient_with_commission">1</span></td>
+  <td class="bet_c bet_c1" id="grid-index-stake-input">
+    <div class="content">
+      <div class="d-flex">
+        <input class="stake form-control inline-input w-number flex-fill" value="0" type="text">
+      </div>
+
+      <span class="minorb text-center">Responsabilidade</span>
+
+      <div class="backers-block">
+        <div class="d-flex">
+          <input class="backers_stake form-control inline-input w-number flex-fill" value="0.0" type="text">
+        </div>
+
+        <span class="minorb text-center">Aposta a favor</span>
+      </div>
+    </div>
+  </td>
+  <td class="bet_c" id="grid-index-stake-currency"><select name="currencies" id="currencies" class="booker-currency form-select form-control w-number"><option value="0">USD</option>
+<option value="1">EUR</option>
+<option value="2">BRL</option>
+<option disabled="disabled" value="separator">──</option>
+<option value="999">Mais...</option></select></td>
+  <td class="currency_c currency_c1" id="grid-index-currency-select">
+    <input type="button" class="ctl-simple currency_direction" name="currency_direction">
+    <span class="equal-sign">=</span>
+  </td>
+  <td class="currency_c" id="grid-index-currency-input">
+    <input class="currency form-control inline-input w-number" name="currency" type="text" value="">
+  </td>
+  <td class="exbet_c exbet_c1">
+    <div class="form-check form-check-inline p-0 mx-0">
+      <input class="distribution form-check-input m-0" checked="checked" title="Distribuir lucro nesta aposta" type="checkbox">
+    </div>
+  </td>
+
+  <td class="exbet_c distribute-fix" id="grid-index-distribute-fix">
+    <div class="form-check form-check-inline p-0 mx-0 me-2 distribute">
+      <input class="distribution form-check-input m-0" checked="checked" title="Distribuir lucro nesta aposta" type="checkbox">
+
+      <strong class="ms-2">
+        D
+      </strong>
+    </div>
+
+    <div class="form-check form-check-inline p-0 mx-0">
+      <input class="fixed-value form-check-input m-0" type="radio" value="sum" name="fixed-value" title="Corrigir esta quantia de apostas durante o cálculo">
+
+      <strong class="ms-2 fixed-value-label">
+        C
+      </strong>
+    </div>
+  </td>
+
+  <td class="prize profit_c">
+    <div class="prize">0</div>
+  </td>
+
+  <td class="prize profit_c compact" id="grid-index-prize">
+    <div class="prize">0</div>
+  </td>
+</tr>
+
+
+
+      <tr class="summarize">
+    <td colspan="2" class="copy-placeholder" id="grid-summarize-copy"></td>
+
+  <td class="comission_c" colspan="2"></td>
+  <td class="bet_c bet_c1" id="grid-summarize-total-stake-input">
+    <div class="d-flex">
+      <input class="sum form-control inline-input w-number flex-fill" type="text" value="100" title="Quantidade de apostas para distribuição">     
+    </div>
+  </td>
+  <td class="bet_c" id="grid-summarize-total-stake-currency">
+    <select name="currencies" id="currencies" class="sum-currency form-select form-control w-number"><option value="0">USD</option>
+<option value="1">EUR</option>
+<option value="2">BRL</option>
+<option disabled="disabled" value="separator">──</option>
+<option value="999">Mais...</option></select>
+  </td>
+  <td class="currency_c currency_c1">
+  </td><td class="currency_c">
+  </td><td class="exbet_c exbet_c1">
+    <div class="form-check form-check-inline p-0 mx-0">
+      <input class="form-check-input m-0" id="mass_check" type="checkbox" checked="checked">
+    </div>
+  </td>
+
+  <td class="exbet_c distribute-fix" id="grid-summarize-distribute-fix">
+    <div class="form-check form-check-inline p-0 mx-0 me-2 distribute">
+      <input class="form-check-input m-0" id="mass_check_compact" type="checkbox" checked="checked">
+
+      <strong class="ms-2">
+        D
+      </strong>
+    </div>
+
+    <div class="form-check form-check-inline p-0 mx-0">
+      <input class="fixed-value form-check-input m-0" type="radio" checked="checked" value="sum" name="fixed-value" title="Corrigir esta quantia de apostas durante o cálculo">
+
+      <strong class="ms-2 fixed-value-label">
+        C
+      </strong>
+    </div>
+  </td>
+
+  <td class="ct_c"></td>
+
+  <td class="total" id="grid-summarize-total-stake-header">
+    <strong class="me-3">
+      Total stake:
+    </strong>
+  </td>
+</tr>
+
+    </tbody></table>
+
+    <div class="commission-currencies-toggle-forms-container">
+      <div class="form-check commission-toggle-form">
+        <input id="editCommission" class="editCurrencies checkbox form-check-input" type="checkbox">
+
+        <label for="editCommission">
+          Mostrar comissões
+        </label>
+      </div>
+
+      <div class="form-check currencies-toggle-form">
+        <input id="editCurrencies" class="editCurrencies checkbox form-check-input" type="checkbox">
+
+        <label for="editCurrencies">
+          Use sua própria taxa de câmbio
+        </label>
+      </div>
+    </div>
+
+    <div class="form-check">
+      <input id="round" class="round checkbox form-check-input" type="checkbox">
+
+      <label for="round">
+        Arredondar aposta até:
+      </label>
+
+      <input id="roundTo" class="roundTo form-control w-number inline-input" type="text" value="1">
+    </div>
+
+    <div class="form-check">
+      <input id="roundSmart" class="roundSmart checkbox form-check-input" type="checkbox">
+
+      <label for="roundSmart">
+        Levar em consideração as taxas de câmbio ao arredondar
+      </label>
+    </div>
+
+  </div>
+</main>
+
+
+
+
+
+</body></html>
